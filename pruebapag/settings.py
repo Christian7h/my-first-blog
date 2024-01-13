@@ -47,7 +47,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.XContentTypeOptionsMiddleware',
+    'principal.middleware.XContentTypeOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'pruebapag.urls'
