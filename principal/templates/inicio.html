@@ -257,49 +257,49 @@
         </div>
 
     </footer>
-        
+    <script>
+        (function() {
+         var target = document.getElementById('scheduling-button');
+         window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0XX1LaOJubJomdKGCnh2_l6lXA4AjsyEK4t6v_RkoXN8i9hyplN58RBYz33XavJcKf2jNn4xea?gv=true',
+              color: '#039BE5',
+              label: "Reservar una Cita(Kine)",
+              target,
+            });
+         });
+        })();
+    </script>
+    
+    <script>
+        (function() {
+        var target = document.getElementById('scheduling-button1');
+        window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ19vaxVC6PlVcuOWYJVQqRUrysSOxycbcdayAJyTeaLPuRK_Oy5fc7zr_riTHyL3LT1NHfeVARl?gv=true',
+            color: '#33B679',
+            label: "Reserva de Cita(Nutri)",
+            target,
+            });
+        });
+        })();
+    </script>
+    
+    <script>
+    (function() {
+        var target = document.getElementById('scheduling-button2');
+        window.addEventListener('load', function() {
+            calendar.schedulingButton.load({
+            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2uz93aQj_uYnNpZne84suekeDjcpB9tGoYLQgqVxg8RdSSO5N0bdHatOIVid99z4RlfA6Bq7LB?gv=true',
+            color: '#8E24AA',
+            label: 'Reservar una cita(Enfer)',
+            target,
+            });
+        });
+        })();
+    
+    </script>
 </body>
 
-<script>
-    (function() {
-     var target = document.getElementById('scheduling-button');
-     window.addEventListener('load', function() {
-        calendar.schedulingButton.load({
-          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0XX1LaOJubJomdKGCnh2_l6lXA4AjsyEK4t6v_RkoXN8i9hyplN58RBYz33XavJcKf2jNn4xea?gv=true',
-          color: '#039BE5',
-          label: "Reservar una Cita(Kine)",
-          target,
-        });
-     });
-    })();
-</script>
 
-<script>
-    (function() {
-    var target = document.getElementById('scheduling-button1');
-    window.addEventListener('load', function() {
-        calendar.schedulingButton.load({
-        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ19vaxVC6PlVcuOWYJVQqRUrysSOxycbcdayAJyTeaLPuRK_Oy5fc7zr_riTHyL3LT1NHfeVARl?gv=true',
-        color: '#33B679',
-        label: "Reserva de Cita(Nutri)",
-        target,
-        });
-    });
-    })();
-</script>
-
-<script>
-(function() {
-    var target = document.getElementById('scheduling-button2');
-    window.addEventListener('load', function() {
-        calendar.schedulingButton.load({
-        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2uz93aQj_uYnNpZne84suekeDjcpB9tGoYLQgqVxg8RdSSO5N0bdHatOIVid99z4RlfA6Bq7LB?gv=true',
-        color: '#8E24AA',
-        label: 'Reservar una cita(Enfer)',
-        target,
-        });
-    });
-    })();
-
-</script>
 </html>
