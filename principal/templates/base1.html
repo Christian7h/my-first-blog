@@ -1,9 +1,8 @@
-
 {%load static%}
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CORPO SANNO</title>
@@ -20,12 +19,109 @@
 
 </head>
 
-<body>
+<body >
+    <style>
+        h1 a, h2 a {
+            color: #C25100;
+            font-family: 'Lobster';
+        }
 
+        .page-header {
+        background-color: #C25100;
+        margin-top: 0;
+        margin-bottom: 40px;
+        padding: 20px 20px 20px 40px;
+        }   
+
+        .page-header h1,
+        .page-header h1 a,
+        .page-header h1 a:visited,
+        .page-header h1 a:active {
+            color: #ffffff;
+            font-size: 36pt;
+            text-decoration: none;
+            
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Lobster', cursive;
+        }
+
+        .date {
+            color: #828282;
+            padding-right: 150px;
+            }
+
+        .save {
+            float: right;
+
+        }
+
+        .post-form textarea,
+        .post-form input {
+            width: 100%;
+
+        }
+
+        .top-menu,
+        .top-menu:hover,
+        .top-menu:visited {
+            color: #ffffff;
+            float: right;
+            font-size: 26pt;
+            margin-right: 20px;
+
+        }
+
+        .post {
+            margin-top: 40px;
+            margin-bottom: 70px;
+            padding-left: 150px;
+
+        }
+
+        .post h2 a,
+        .post h2 a:visited {
+            color: #000000;
+        }
+
+        .post > .date,
+        .post > .actions {
+            float: right;
+        }
+
+        .btn-secondary,
+        .btn-secondary:visited {
+            color: #C25100;
+            background: none;
+            border-color: #C25100;
+        }
+
+        .btn-secondary:hover {
+            color: #FFFFFF;
+            background-color: #C25100;
+        }
+            @media screen and (max-width: 768px) {
+        .tarjetas {
+            grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .tarjetas {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+
+    </style>
     <header>
         <nav class="navbar navbar-expand-lg" style="background-color: #8fffff;">
             <div class="container">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="#">
                     <img src="{% static 'logocorpo.png' %}" alt="Logo" width="205" height="88" class="d-inline-block align-text-top">
                 </a>
                 <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()">
@@ -41,46 +137,46 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="/">Inicio</a>
+                            <a class="nav-link" href="#Inicio">Inicio</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="/#Servicios">Servicios</a>
+                            <a class="nav-link" href="#Servicios">Servicios</a>
                         </li>   
                         <li class="nav-item active">
-                            <a class="nav-link" href="/#Reserva de Cita">Reserva de Cita</a>
+                            <a class="nav-link" href="#Reserva de Cita">Reserva de Cita</a>
                         </li> 
                         <li class="nav-item active">
-                            <a class="nav-link" href="/#Profesionales">Profesionales</a>
+                            <a class="nav-link" href="#Profesionales">Profesionales</a>
                         </li>     
                         <li class="nav-item active">
-                            <a class="nav-link" href="">Blog</a>
+                            <a class="nav-link" href="/blog/">Blog</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="/#Acerca de Nosotros">Acerca de Nosotros</a>
+                            <a class="nav-link" href="#Acerca de Nosotros">Acerca de Nosotros</a>
                         </li>   
                         <li class="nav-item active">
-                            <a class="nav-link" href="/#Contactos">Contacto</a>
+                            <a class="nav-link" href="#Contactos">Contacto</a>
                         </li> 
-                     
+                        
                     </ul>
+                   
                 </div>
             </div>
         </nav>
     </header>
 
-   
-    {% block content %}
-    {% for post in posts %}
-        <article class="post">
-            <time class="date">
-                {{ post.published_date }}
-            </time>
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
 
-            <p>{{ post.text|linebreaksbr }}</p>
-        </article>
-    {% endfor %}
-{% endblock %}
+    <main class="content container">
+        <div class="row">
+            <div class="col">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+
+
+ 
     <footer class="pie-pagina bg-personalizado py-5" id="Contactos">
         <div class="container">
             <div class="row">
@@ -129,6 +225,8 @@
         </div>
 
     </footer>
-
+        
 </body>
+
+
 </html>

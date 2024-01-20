@@ -16,14 +16,12 @@ Including another URLconf
 # pruebapag/urls.py
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from principal import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.inicio, name='inicio'),
-    path('blog/',views.blog,name='blog'),
-    path('post/<int:pk>/', views.post_detail, name='post_detail'),
-    path('post/new/', views.post_new, name='post_new'),
-    path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
-]
+    path('', include('principal.urls')),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
