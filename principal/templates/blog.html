@@ -22,7 +22,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{post.title}} <br><small>by {{post.author}}</small></h5>
                   <p class="card-text">{{post.content| truncatechars:210}}</p>                                          
-                  <a href="{% url 'blogs_comments' slug=post.slug %}" class="btn btn-primary">Leer MAS  {% if user.is_superuser %}<a href="{%url 'delete_blog_post' slug=post.slug %}" class="btn btn-danger mx-4">Eliminar Blog</a>{% endif %}</a>
+                  <a href="{% url 'blogs_comments' slug=post.slug %}" class="btn btn-primary">Leer Mas  {% if user.is_superuser %}<a href="{%url 'delete_blog_post' slug=post.slug %}" class="btn btn-danger mx-4">Eliminar Blog</a>{% endif %}</a>
                 </div>
               </div>
         </div>
